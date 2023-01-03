@@ -1,4 +1,6 @@
 .git
 ./plugin
 ./plugin/*
+plugin/*.*
+plugin/
 .DS_Store
