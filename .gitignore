@@ -1,0 +1,4 @@
+.git
+./plugin
+./plugin/*
+.DS_Store
