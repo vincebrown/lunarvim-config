@@ -1,5 +1,2 @@
--- lvim.colorscheme = "lunar"
-
--- Change theme settings
--- lvim.builtin.theme.options.dim_inactive = true
--- lvim.builtin.theme.options.style = "storm"
+vim.g.sonokai_style = "andromeda"
+lvim.colorscheme = "sonokai"

@@ -11,12 +11,23 @@ reload("vince.plugins.terminal")
 reload("vince.plugins.treesitter")
 reload("vince.plugins.lua")
 
+
 -- Additional Plugins
 lvim.plugins = {
+  { "lunarvim/colorschemes" },
+  { "rose-pine/neovim", as = "rose-pine" },
+  { "catppuccin/nvim", as = "catppuccin" },
+  { "ThePrimeagen/vim-be-good" },
+  { "morhetz/gruvbox" },
+  { "sainnhe/sonokai", as = "sonokai" },
+  { "sainnhe/everforest" },
+  { "arcticicestudio/nord-vim" },
+  { "p00f/nvim-ts-rainbow", },
+  { "ThePrimeagen/harpoon" },
   {
-    'lewis6991/gitsigns.nvim',
+    "folke/zen-mode.nvim",
     config = function()
-      require('gitsigns').setup()
+      require("zen-mode").setup {}
     end
   },
   {
@@ -24,27 +35,6 @@ lvim.plugins = {
     config = function()
       require('symbols-outline').setup()
     end
-  },
-  {
-    "catppuccin/nvim", as = "catppuccin"
-  },
-  {
-    "ThePrimeagen/vim-be-good"
-  },
-  {
-    "morhetz/gruvbox"
-  },
-  {
-    "sainnhe/sonokai", as = "sonokai"
-  },
-  {
-    "sainnhe/everforest"
-  },
-  {
-    "p00f/nvim-ts-rainbow",
-  },
-  {
-    "ThePrimeagen/harpoon"
   },
   {
     "ray-x/lsp_signature.nvim",
