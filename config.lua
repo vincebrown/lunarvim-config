@@ -3,7 +3,6 @@ reload("vince.core.options")
 reload("vince.core.remap")
 reload("vince.core.theme")
 
-
 -- Plugin Settings
 reload("vince.plugins.alpha")
 reload("vince.plugins.lsp")
@@ -21,16 +20,25 @@ lvim.plugins = {
     end
   },
   {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require('symbols-outline').setup()
+    end
+  },
+  {
     "catppuccin/nvim", as = "catppuccin"
   },
   {
     "ThePrimeagen/vim-be-good"
   },
   {
-    "luisiacc/gruvbox-baby"
+    "morhetz/gruvbox"
   },
   {
-    "sainnhe/sonokai"
+    "sainnhe/sonokai", as = "sonokai"
+  },
+  {
+    "sainnhe/everforest"
   },
   {
     "p00f/nvim-ts-rainbow",
@@ -51,7 +59,6 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
-  { "folke/tokyonight.nvim" },
   {
     "tpope/vim-fugitive",
     cmd = {

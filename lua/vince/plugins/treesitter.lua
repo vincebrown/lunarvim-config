@@ -12,6 +12,10 @@ lvim.builtin.treesitter.ensure_installed = {
   "java",
   "yaml",
 }
-
+lvim.builtin.treesitter.rainbow = {
+  enable = true,
+  extended_mode = true,
+  max_file_lines = 2000
+}
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
