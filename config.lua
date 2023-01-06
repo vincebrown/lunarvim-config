@@ -14,6 +14,13 @@ reload("vince.plugins.lua")
 
 -- Additional Plugins
 lvim.plugins = {
+  {
+    "phaazon/hop.nvim",
+    branch = "v2",
+    config = function()
+      require("hop").setup()
+    end
+  },
   { "lunarvim/colorschemes" },
   { "rose-pine/neovim", as = "rose-pine" },
   { "catppuccin/nvim", as = "catppuccin" },
