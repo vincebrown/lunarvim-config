@@ -12,6 +12,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "java",
   "yaml",
   "graphql",
+  "prisma",
 }
 lvim.builtin.treesitter.rainbow = {
   enable = true,
