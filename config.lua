@@ -14,6 +14,7 @@ reload("vince.plugins.lua")
 
 -- Additional Plugins
 lvim.plugins = {
+  { "f-person/git-blame.nvim" },
   {
     "phaazon/hop.nvim",
     branch = "v2",
@@ -21,6 +22,25 @@ lvim.plugins = {
       require("hop").setup()
     end
   },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      })
+    end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
+    end
+  },
+  { "EdenEast/nightfox.nvim" },
   { "lunarvim/colorschemes" },
   { "rose-pine/neovim", as = "rose-pine" },
   { "catppuccin/nvim", as = "catppuccin" },
@@ -75,7 +95,12 @@ lvim.plugins = {
     },
     ft = { "fugitive" }
   },
+  {
+    'mrjones2014/dash.nvim',
+    run = 'make install',
+  }
 }
+
 
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
